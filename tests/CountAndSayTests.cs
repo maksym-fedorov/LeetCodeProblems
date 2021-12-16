@@ -11,9 +11,9 @@ namespace LeetCode.Problems.Tests
         [DataRow(3, "21")]
         [DataRow(4, "1211")]
         [DataRow(5, "111221")]
-        public void CountandSay_ValuesInRangeFromOneToFive_CorrectStringExpected(int n, string expected)
+        public void Run_ValuesInRangeFromOneToFive_CorrectStringExpected(int n, string expected)
         {
-            var actual = CountAndSay.Method(n);
+            var actual = CountAndSay.Run(n);
 
             Assert.AreEqual(expected, actual);
         }

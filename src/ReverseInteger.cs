@@ -4,7 +4,7 @@ namespace LeetCode.Problems
 {
     internal sealed class ReverseInteger
     {
-        public static int Method(int x)
+        public static int Run(int x)
         {
             var result = 0;
 

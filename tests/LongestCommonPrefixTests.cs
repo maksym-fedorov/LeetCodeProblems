@@ -8,11 +8,11 @@ namespace LeetCode.Problems.Tests
         [TestMethod]
         [DataRow(new string[] { "flower", "flow", "light" }, "")]
         [DataRow(new string[] { "flower", "flow", "flight" }, "fl")]
-        public void Method_ReturnsLongestCommonPrefixInArrayOfStrings(string[] array, string expectedResult)
+        public void Run_ReturnsLongestCommonPrefixInArrayOfStrings(string[] array, string expected)
         {
-            var actualResult = LongestCommonPrefix.Method(array);
+            var actual = LongestCommonPrefix.Run(array);
 
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expected, actual);
         }
     }
 }

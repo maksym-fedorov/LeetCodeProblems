@@ -9,7 +9,7 @@
 
     internal sealed class MergeTwoSortedLists
     {
-        public static ListNode Method(ListNode l1, ListNode l2)
+        public static ListNode Run(ListNode l1, ListNode l2)
         {
             if (l1 == null)
             {

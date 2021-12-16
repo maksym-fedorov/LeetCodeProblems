@@ -10,13 +10,13 @@ namespace LeetCode.Problems.Tests
         [DataRow(1234567899, 0)]
         [DataRow(-123, -321)]
         [DataRow(321, 123)]
-        public void Method_ReturnsReversedValue(int value, int expectedResult)
+        public void Run_ReturnsReversedValue(int value, int expected)
         {
             // Act
-            var actualResult = ReverseInteger.Method(value);
+            var actual = ReverseInteger.Run(value);
 
             // Assert
-            Assert.AreEqual(actualResult, expectedResult);
+            Assert.AreEqual(expected, actual);
         }
     }
 }

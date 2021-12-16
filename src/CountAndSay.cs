@@ -4,7 +4,7 @@ namespace LeetCode.Problems
 {
     internal sealed class CountAndSay
     {
-        public static string Method(int n)
+        public static string Run(int n)
         {
             var terms = new List<string>() { "1" };
 

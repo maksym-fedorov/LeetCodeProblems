@@ -6,99 +6,17 @@ namespace LeetCode.Problems.Tests
     public sealed class IndexOfSubStringTests
     {
         [TestMethod]
-        public void IndexOfSubStringBruteForce_EmptyStringEmptySubString_ZeroExpected()
+        [DataRow("", "", 0)]
+        [DataRow("", "AAA", -1)]
+        [DataRow("AAA", "", 0)]
+        [DataRow("ABCABCBABCABC", "BAC", -1)]
+        [DataRow("AAABBBAAA", "AA", 0)]
+        [DataRow("AABAAABAAAC", "AABAAAC", 4)]
+        public void Run_ReturnsIndexOfSubstring(string str, string subStr, int expected)
         {
-            var actual = IndexOfSubstring.MethodKMP(string.Empty, string.Empty);
+            var actual = IndexOfSubstring.Run(str, subStr);
 
-            Assert.AreEqual(0, actual);
-        }
-
-        [TestMethod]
-        public void IndexOfSubStringBruteForce_EmptyStringNonEmptySubString_NegativeNumberExpected()
-        {
-            var actual = IndexOfSubstring.MethodKMP(string.Empty, "AAA");
-
-            Assert.AreEqual(-1, actual);
-        }
-
-        [TestMethod]
-        public void IndexOfSubStringBruteForce_NonEmptyStringEmptySubString_ZeroExpected()
-        {
-            var actual = IndexOfSubstring.MethodKMP("AAA", string.Empty);
-
-            Assert.AreEqual(0, actual);
-        }
-
-        [TestMethod]
-        public void IndexOfSubStringBruteForce_StringDoesntContainSubstring_NegativeNumberExpected()
-        {
-            var actual = IndexOfSubstring.MethodKMP("ABCABCBABCABC", "BAB");
-
-            Assert.AreEqual(6, actual);
-        }
-
-        [TestMethod]
-        public void IndexOfSubStringBruteForce_StringContainsSubstringAtTheBegining_ZeroNumberExpected()
-        {
-            var actual = IndexOfSubstring.MethodKMP("AAABBBAAA", "AA");
-
-            Assert.AreEqual(0, actual);
-        }
-
-        [TestMethod]
-        public void IndexOfSubStringBruteForce_StringContainsSubstringAtTheMiddle_PositiveNumberExpected()
-        {
-            var actual = IndexOfSubstring.MethodKMP("AABAAABAAAC", "AABAAAC");
-
-            Assert.AreEqual(4, actual);
-        }
-
-        [TestMethod]
-        public void IndexOfSubStringKMP_EmptyStringEmptySubString_ZeroExpected()
-        {
-            var actual = IndexOfSubstring.MethodKMP(string.Empty, string.Empty);
-
-            Assert.AreEqual(0, actual);
-        }
-
-        [TestMethod]
-        public void IndexOfSubStringKMP_EmptyStringNonEmptySubString_NegativeNumberExpected()
-        {
-            var actual = IndexOfSubstring.MethodKMP(string.Empty, "AAA");
-
-            Assert.AreEqual(-1, actual);
-        }
-
-        [TestMethod]
-        public void IndexOfSubStringKMP_NonEmptyStringEmptySubString_ZeroExpected()
-        {
-            var actual = IndexOfSubstring.MethodKMP("AAA", string.Empty);
-
-            Assert.AreEqual(0, actual);
-        }
-
-        [TestMethod]
-        public void IndexOfSubStringKMP_StringDoesntContainSubstring_NegativeNumberExpected()
-        {
-            var actual = IndexOfSubstring.MethodKMP("ABCABCBABCABC", "BAB");
-
-            Assert.AreEqual(6, actual);
-        }
-
-        [TestMethod]
-        public void IndexOfSubStringKMP_StringContainsSubstringAtTheBegining_ZeroNumberExpected()
-        {
-            var actual = IndexOfSubstring.MethodKMP("AAABBBAAA", "AA");
-
-            Assert.AreEqual(0, actual);
-        }
-
-        [TestMethod]
-        public void IndexOfSubStringKMP_StringContainsSubstringAtTheMiddle_PositiveNumberExpected()
-        {
-            var actual = IndexOfSubstring.MethodKMP("AABAAABAAAC", "AABAAAC");
-
-            Assert.AreEqual(4, actual);
+            Assert.AreEqual(expected, actual);
         }
     }
 }

@@ -2,7 +2,7 @@
 {
     internal sealed class RemoveDuplicatesFromSortedArray
     {
-        public static int Method(int[] nums)
+        public static int Run(int[] nums)
         {
             if (nums.Length == 0)
             {

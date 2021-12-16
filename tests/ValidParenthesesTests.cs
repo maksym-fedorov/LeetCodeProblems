@@ -18,13 +18,13 @@ namespace LeetCode.Problems.Tests
         [DataRow("()", true)]
         [DataRow("[{((])}]", false)]
         [DataRow("[(({}))[]{}]()", true)]
-        public void Method_VerifiesParentheses(string value, bool expectedResult)
+        public void Run_ChecksWhetherParenthesesAreValid(string value, bool expected)
         {
             // Act
-            var actualResult = ValidParentheses.Method(value);
+            var actual = ValidParentheses.Run(value);
 
             // Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expected, actual);
         }
     }
 }

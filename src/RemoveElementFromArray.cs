@@ -2,7 +2,7 @@
 {
     internal sealed class RemoveElementFromArray
     {
-        public static int Method(int[] nums, int val)
+        public static int Run(int[] nums, int val)
         {
             if (nums.Length == 0)
             {

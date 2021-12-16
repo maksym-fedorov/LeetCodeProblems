@@ -9,13 +9,13 @@ namespace LeetCode.Problems.Tests
         [DataRow("IV", 4)]
         [DataRow("LVIII", 58)]
         [DataRow("XIX", 19)]
-        public void Method_ReturnsIntegerNumberFromRomanValue(string value, int expectedResult)
+        public void Run_ReturnsIntegerNumberFromRomanValue(string value, int expected)
         {
             // Act
-            var actualResult = RomanToInteger.Method(value);
+            var actual = RomanToInteger.Run(value);
 
             // Assert
-            Assert.AreEqual(actualResult, expectedResult);
+            Assert.AreEqual(actual, expected);
         }
     }
 }

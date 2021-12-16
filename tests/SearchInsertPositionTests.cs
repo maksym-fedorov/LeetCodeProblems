@@ -12,21 +12,21 @@ namespace LeetCode.Problems.Tests
         [DataRow(new int[] { 1, 2, 4 }, -1, 0)]
         [DataRow(new int[] { 1, 2 }, 3, 2)]
         [DataRow(new int[] { 1, 2, 3, 7, 9 }, 5, 3)]
-        public void Method_ReturnsPositionForInsertValueKeepingOrder(int[] array, int insertValue, int expectedResult)
+        public void Run_ReturnsPositionForInsertValueKeepingOrder(int[] array, int insertValue, int expected)
         {
             // Act
-            var actualResult = SearchInsertPosition.Method(array, insertValue);
+            var actual = SearchInsertPosition.Run(array, insertValue);
 
             // Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Method_ThrowsArgumentNullException_WhenArrayIsNull()
+        public void Run_ThrowsArgumentNullException_WhenArrayIsNull()
         {
             // Act
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => SearchInsertPosition.Method(null, 0));
+            Assert.ThrowsException<ArgumentNullException>(() => SearchInsertPosition.Run(null, 0));
         }
     }
 }

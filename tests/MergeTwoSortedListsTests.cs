@@ -8,24 +8,24 @@ namespace LeetCode.Problems.Tests
     {
         [TestMethod]
         [DynamicData(nameof(GetTestData), DynamicDataSourceType.Method)]
-        public void Method_ReturnsMergeOfTwoSortedLists(object obj1, object obj2, object expectedObj)
+        public void Run_ReturnsMergeOfTwoSortedLists(object obj1, object obj2, object expectedObj)
         {
             var l1 = (ListNode)obj1;
             var l2 = (ListNode)obj2;
-            var expectedResult = (ListNode)expectedObj;
+            var expected = (ListNode)expectedObj;
 
-            var actualResult = MergeTwoSortedLists.Method(l1, l2);
+            var actual = MergeTwoSortedLists.Run(l1, l2);
 
-            while (expectedResult != null && actualResult != null)
+            while (expected != null && actual != null)
             {
-                Assert.AreEqual(actualResult.val, expectedResult.val);
+                Assert.AreEqual(expected.val, actual.val);
 
-                actualResult = actualResult.next;
-                expectedResult = expectedResult.next;
+                actual = actual.next;
+                expected = expected.next;
             }
 
-            Assert.IsNull(expectedResult);
-            Assert.IsNull(actualResult);
+            Assert.IsNull(expected);
+            Assert.IsNull(actual);
         }
 
         private static IEnumerable<object[]> GetTestData()

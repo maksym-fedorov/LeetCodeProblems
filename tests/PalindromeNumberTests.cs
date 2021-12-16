@@ -12,11 +12,11 @@ namespace LeetCode.Problems.Tests
         [DataRow(1, true)]
         [DataRow(11, true)]
         [DataRow(123321, true)]
-        public void Method_ChecksWhetherTheNumberIsPalindrome(int value, bool expectedResult)
+        public void Run_ChecksWhetherTheNumberIsPalindrome(int value, bool expected)
         {
-            var actualResult = PalindromeNumber.Method(value);
+            var actual = PalindromeNumber.Run(value);
 
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expected, actual);
         }
     }
 }

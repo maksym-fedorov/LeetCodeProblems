@@ -2,7 +2,7 @@
 {
     internal sealed class RomanToInteger
     {
-        public static int Method(string s)
+        public static int Run(string s)
         {
             int result = 0;
 

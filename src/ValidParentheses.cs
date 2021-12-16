@@ -4,7 +4,7 @@ namespace LeetCode.Problems
 {
     internal sealed class ValidParentheses
     {
-        public static bool Method(string s)
+        public static bool Run(string s)
         {
             if (s.Length % 2 != 0)
             {

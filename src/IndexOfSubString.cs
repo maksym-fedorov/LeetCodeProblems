@@ -2,40 +2,9 @@
 {
     internal sealed class IndexOfSubstring
     {
-        public static int MethodBruteForce(string haystack, string needle)
+        public static int Run(string haystack, string needle)
         {
-            if (string.IsNullOrEmpty(needle))
-            {
-                return 0;
-            }
-
-            if (string.IsNullOrEmpty(haystack))
-            {
-                return -1;
-            }
-
-            int i = 0;
-            int j = 0;
-
-            while (i < haystack.Length && j < needle.Length)
-            {
-                if (haystack[i] == needle[j])
-                {
-                    i++;
-                    j++;
-                }
-                else
-                {
-                    i++;
-                    j = 0;
-                }
-            }
-
-            return j == needle.Length ? i - needle.Length : -1;
-        }
-
-        public static int MethodKMP(string haystack, string needle)
-        {
+            // KMP
             if (string.IsNullOrEmpty(needle))
             {
                 return 0;

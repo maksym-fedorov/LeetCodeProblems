@@ -4,7 +4,7 @@ namespace LeetCode.Problems
 {
     internal sealed class PalindromeNumber
     {
-        public static bool Method(int x)
+        public static bool Run(int x)
         {
             if (x < 0)
             {

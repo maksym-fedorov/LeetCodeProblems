@@ -2,7 +2,7 @@
 {
     internal sealed class LongestCommonPrefix
     {
-        public static string Method(string[] strs)
+        public static string Run(string[] strs)
         {
             if (strs.Length == 0)
             {

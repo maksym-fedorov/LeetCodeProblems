@@ -8,14 +8,14 @@ namespace LeetCode.Problems.Tests
     public sealed class TwoSumTests
     {
         [TestMethod]
-        public void Method_ThrowsArgumentException_WhenNoElementsWhichProducesSum()
+        public void Run_ThrowsArgumentException_WhenNoElementsWhichProducesSum()
         {
             // Arrange
             var array = new int[] { 1, 3, 5, -2, -4 };
             var sum = 7;
 
             // Act
-            var exception = Assert.ThrowsException<ArgumentException>(() => TwoSum.Method(array, sum));
+            var exception = Assert.ThrowsException<ArgumentException>(() => TwoSum.Run(array, sum));
 
             // Assert
             Assert.AreEqual("Incorrect input data", exception.Message);
@@ -23,13 +23,13 @@ namespace LeetCode.Problems.Tests
 
         [TestMethod]
         [DynamicData(nameof(GetTestData), DynamicDataSourceType.Method)]
-        public void Method_ReturnsPairOfIndiciesOfElementsWhichProducesSum(int[] array, int sum, ValueTuple<int, int> expectedResult)
+        public void Run_ReturnsPairOfIndiciesOfElementsWhichProducesSum(int[] array, int sum, ValueTuple<int, int> expected)
         {
             // Act
-            var actualResult = TwoSum.Method(array, sum);
+            var actual = TwoSum.Run(array, sum);
 
             // Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expected, actual);
         }
 
         private static IEnumerable<object[]> GetTestData()

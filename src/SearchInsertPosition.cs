@@ -2,7 +2,7 @@
 {
     internal sealed class SearchInsertPosition
     {
-        public static int Method(int[] nums, int target)
+        public static int Run(int[] nums, int target)
         {
             if (nums is null)
             {

@@ -5,7 +5,7 @@ namespace LeetCode.Problems
 {
     internal sealed class TwoSum
     {
-        public static ValueTuple<int, int> Method(int[] nums, int target)
+        public static ValueTuple<int, int> Run(int[] nums, int target)
         {
             var valuesIndicies = new Dictionary<int, int>();
 
