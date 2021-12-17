@@ -2,10 +2,10 @@ namespace LeetCode.Problems
 {
     internal sealed class CountNegativeNumbersInASortedMatrix
     {
-        public static int Run(int[,] matrix)
+        public static int Run(int[][] matrix)
         {
             var raws = matrix.GetLength(0);
-            var columns = matrix.GetLength(1);
+            var columns = matrix[0].GetLength(0);
             
             var negatives = raws * columns;
             var raw = raws - 1;
@@ -13,7 +13,7 @@ namespace LeetCode.Problems
 
             while (raw >= 0 && column < raws)
             {
-                if (matrix[raw, column] >= 0)
+                if (matrix[raw][column] >= 0)
                 {
                     negatives -= raw + 1;
                     column++;
