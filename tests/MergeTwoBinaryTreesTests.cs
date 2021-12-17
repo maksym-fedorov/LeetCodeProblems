@@ -38,6 +38,9 @@ namespace LeetCode.Problems.Tests
                 actualNodesQueue.Enqueue(expectedNode.left);
                 actualNodesQueue.Enqueue(expectedNode.right);
             }
+
+            Assert.AreEqual(0, expectedNodesQueue.Count);
+            Assert.AreEqual(0, actualNodesQueue.Count);
         }
 
         private static IEnumerable<object[]> GetTestData()
