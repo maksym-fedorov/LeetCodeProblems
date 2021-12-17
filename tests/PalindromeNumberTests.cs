@@ -14,8 +14,10 @@ namespace LeetCode.Problems.Tests
         [DataRow(123321, true)]
         public void Run_ChecksWhetherTheNumberIsPalindrome(int value, bool expected)
         {
+            // Act
             var actual = PalindromeNumber.Run(value);
 
+            // Assert
             Assert.AreEqual(expected, actual);
         }
     }

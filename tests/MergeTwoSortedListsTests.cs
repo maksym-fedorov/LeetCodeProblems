@@ -14,8 +14,10 @@ namespace LeetCode.Problems.Tests
             var l2 = (MergeTwoSortedLists.ListNode)obj2;
             var expected = (MergeTwoSortedLists.ListNode)expectedObj;
 
+            // Act
             var actual = MergeTwoSortedLists.Run(l1, l2);
 
+            // Assert
             while (expected != null && actual != null)
             {
                 Assert.AreEqual(expected.val, actual.val);

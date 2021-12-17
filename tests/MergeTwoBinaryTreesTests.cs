@@ -14,8 +14,10 @@ namespace LeetCode.Problems.Tests
             var root2 = (MergeTwoBinaryTrees.TreeNode)obj2;
             var expected = (MergeTwoBinaryTrees.TreeNode)expectedObj;
 
+            // Act
             var actual = MergeTwoBinaryTrees.Run(root1, root2);
 
+            // Assert
             var expectedNodesQueue = new Queue<MergeTwoBinaryTrees.TreeNode>();
             var actualNodesQueue = new Queue<MergeTwoBinaryTrees.TreeNode>();
             expectedNodesQueue.Enqueue(expected);
@@ -38,9 +40,6 @@ namespace LeetCode.Problems.Tests
                 actualNodesQueue.Enqueue(expectedNode.left);
                 actualNodesQueue.Enqueue(expectedNode.right);
             }
-
-            Assert.AreEqual(0, expectedNodesQueue.Count);
-            Assert.AreEqual(0, actualNodesQueue.Count);
         }
 
         private static IEnumerable<object[]> GetTestData()

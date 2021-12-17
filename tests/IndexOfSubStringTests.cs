@@ -14,8 +14,10 @@ namespace LeetCode.Problems.Tests
         [DataRow("AABAAABAAAC", "AABAAAC", 4)]
         public void Run_ReturnsIndexOfSubstring(string str, string subStr, int expected)
         {
+            // Act
             var actual = IndexOfSubstring.Run(str, subStr);
 
+            // Assert
             Assert.AreEqual(expected, actual);
         }
     }

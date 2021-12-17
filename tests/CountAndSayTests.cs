@@ -13,8 +13,10 @@ namespace LeetCode.Problems.Tests
         [DataRow(5, "111221")]
         public void Run_ValuesInRangeFromOneToFive_CorrectStringExpected(int n, string expected)
         {
+            // Act
             var actual = CountAndSay.Run(n);
 
+            // Assert
             Assert.AreEqual(expected, actual);
         }
     }

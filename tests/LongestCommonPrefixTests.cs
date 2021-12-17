@@ -10,8 +10,10 @@ namespace LeetCode.Problems.Tests
         [DataRow(new string[] { "flower", "flow", "flight" }, "fl")]
         public void Run_ReturnsLongestCommonPrefixInArrayOfStrings(string[] array, string expected)
         {
+            // Act
             var actual = LongestCommonPrefix.Run(array);
 
+            // Assert
             Assert.AreEqual(expected, actual);
         }
     }
