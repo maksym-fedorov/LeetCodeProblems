@@ -2,18 +2,18 @@ namespace LeetCode.Problems
 {
     internal sealed class CountNegativeNumbersInASortedMatrix
     {
-        public static int Run(int[][] matrix)
+        public static int Run(int[][] grid)
         {
-            var raws = matrix.GetLength(0);
-            var columns = matrix[0].GetLength(0);
+            var raws = grid.GetLength(0);
+            var columns = grid[0].GetLength(0);
             
             var negatives = raws * columns;
             var raw = raws - 1;
             var column = 0;
 
-            while (raw >= 0 && column < raws)
+            while (raw >= 0 && column < columns)
             {
-                if (matrix[raw][column] >= 0)
+                if (grid[raw][column] >= 0)
                 {
                     negatives -= raw + 1;
                     column++;

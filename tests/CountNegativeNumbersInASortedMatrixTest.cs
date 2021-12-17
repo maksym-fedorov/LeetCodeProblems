@@ -12,7 +12,7 @@ namespace LeetCode.Problems.Tests
         {
             var matrix = (int[][])obj;
             var expected = (int)expectedObj;
-            
+
             // Act
             var actual = CountNegativeNumbersInASortedMatrix.Run(matrix);
 
@@ -37,6 +37,10 @@ namespace LeetCode.Problems.Tests
             // Arrange #3
             var matrix3 = new int[][] { new int[] { -1 } };
             yield return new object[] { matrix3, 1 };
+
+            // Arrange #4
+            var matrix4 = new int[][] { new int[] { 5, 1, 0 }, new int[] { -5, -5, -5 } };
+            yield return new object[] { matrix4, 3 };
         }
     }
 }
