@@ -12,5 +12,8 @@
 # MSTest test Results
 [Tt]est[Rr]esult*/
 
+# Visual Studio
+.vs
+
 # Visual Studio Code
 .vscode/
