@@ -1,6 +1,6 @@
 namespace LeetCode.Problems
 {
-    internal sealed class MergeTwoBinaryTrees
+    public sealed class MergeTwoBinaryTrees
     {
         public static TreeNode Run(TreeNode root1, TreeNode root2)
         {
@@ -28,7 +28,7 @@ namespace LeetCode.Problems
             return node;
         }
 
-        internal sealed class TreeNode
+        public sealed class TreeNode
         {
             public int val;
             public TreeNode left;

@@ -1,6 +1,6 @@
 namespace LeetCode.Problems
 {
-    internal sealed class FindNUniqueIntegersSumUpToZero
+    public sealed class FindNUniqueIntegersSumUpToZero
     {
         public static int[] Run(int n)
         {

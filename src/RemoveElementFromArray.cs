@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.Problems
 {
-    internal sealed class RemoveElementFromArray
+    public sealed class RemoveElementFromArray
     {
         public static int Run(int[] nums, int val)
         {

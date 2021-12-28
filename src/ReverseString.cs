@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.Problems
 {
-    internal sealed class ReverseString
+    public sealed class ReverseString
     {
         public static void Run(char[] s)
         {

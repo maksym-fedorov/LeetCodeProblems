@@ -2,7 +2,7 @@
 
 namespace LeetCode.Problems
 {
-    internal sealed class ReverseInteger
+    public sealed class ReverseInteger
     {
         public static int Run(int x)
         {

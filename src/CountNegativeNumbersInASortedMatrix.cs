@@ -1,6 +1,6 @@
 namespace LeetCode.Problems
 {
-    internal sealed class CountNegativeNumbersInASortedMatrix
+    public sealed class CountNegativeNumbersInASortedMatrix
     {
         public static int Run(int[][] grid)
         {

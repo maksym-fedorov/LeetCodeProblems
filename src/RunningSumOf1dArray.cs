@@ -1,6 +1,6 @@
 namespace LeetCode.Problems
 {
-    internal sealed class RunningSumOf1dArray
+    public sealed class RunningSumOf1dArray
     {
         public static int[] Run(int[] nums)
         {

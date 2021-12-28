@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.Problems
 {
-    internal sealed class RemoveDuplicatesFromSortedArray
+    public sealed class RemoveDuplicatesFromSortedArray
     {
         public static int Run(int[] nums)
         {

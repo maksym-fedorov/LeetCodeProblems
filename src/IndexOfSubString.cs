@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.Problems
 {
-    internal sealed class IndexOfSubstring
+    public sealed class IndexOfSubstring
     {
         public static int Run(string haystack, string needle)
         {

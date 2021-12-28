@@ -2,7 +2,7 @@
 
 namespace LeetCode.Problems
 {
-    internal sealed class PalindromeNumber
+    public sealed class PalindromeNumber
     {
         public static bool Run(int x)
         {

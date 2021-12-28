@@ -8,7 +8,7 @@ namespace LeetCode.Problems.Tests
         [TestMethod]
         [DataRow(new[] { 'h', 'e', 'l', 'l', 'o' }, new[] { 'o', 'l', 'l', 'e', 'h' })]
         [DataRow(new[] { 'H', 'a', 'n', 'n', 'a', 'h' }, new[] { 'h', 'a', 'n', 'n', 'a', 'H' })]
-        public void Run_ReturnsReversedString(char[] s, char[] expected)
+        public void Run_ReversesString(char[] s, char[] expected)
         {
             // Act
             ReverseString.Run(s);

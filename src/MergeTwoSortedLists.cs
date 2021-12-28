@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.Problems
 {
-    internal sealed class MergeTwoSortedLists
+    public sealed class MergeTwoSortedLists
     {
         public static ListNode Run(ListNode l1, ListNode l2)
         {
@@ -63,7 +63,7 @@
             return head;
         }
 
-        internal sealed class ListNode
+        public sealed class ListNode
         {
             public int val;
             public ListNode next;

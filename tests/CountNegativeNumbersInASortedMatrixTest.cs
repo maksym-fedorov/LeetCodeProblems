@@ -8,11 +8,8 @@ namespace LeetCode.Problems.Tests
     {
         [TestMethod]
         [DynamicData(nameof(GetTestData), DynamicDataSourceType.Method)]
-        public void Run_CountsNegativeNumbersInSortedMatrix(object obj, object expectedObj)
+        public void Run_CountsNegativeNumbersInSortedMatrix(int[][] matrix, int expected)
         {
-            var matrix = (int[][])obj;
-            var expected = (int)expectedObj;
-
             // Act
             var actual = CountNegativeNumbersInASortedMatrix.Run(matrix);
 

@@ -2,7 +2,7 @@
 
 namespace LeetCode.Problems
 {
-    internal sealed class ValidParentheses
+    public sealed class ValidParentheses
     {
         public static bool Run(string s)
         {

@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.Problems
 {
-    internal sealed class RomanToInteger
+    public sealed class RomanToInteger
     {
         public static int Run(string s)
         {

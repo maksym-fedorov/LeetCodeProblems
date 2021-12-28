@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LeetCode.Problems
 {
-    internal sealed class TwoSum
+    public sealed class TwoSum
     {
         public static ValueTuple<int, int> Run(int[] nums, int target)
         {

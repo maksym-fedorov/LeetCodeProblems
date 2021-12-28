@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.Problems
 {
-    internal sealed class SearchInsertPosition
+    public sealed class SearchInsertPosition
     {
         public static int Run(int[] nums, int target)
         {

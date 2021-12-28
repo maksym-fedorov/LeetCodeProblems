@@ -8,12 +8,8 @@ namespace LeetCode.Problems.Tests
     {
         [TestMethod]
         [DynamicData(nameof(GetTestData), DynamicDataSourceType.Method)]
-        public void Run_ReturnsMergeOfTwoSortedLists(object obj1, object obj2, object expectedObj)
+        public void Run_ReturnsMergeOfTwoSortedLists(MergeTwoBinaryTrees.TreeNode root1, MergeTwoBinaryTrees.TreeNode root2, MergeTwoBinaryTrees.TreeNode expected)
         {
-            var root1 = (MergeTwoBinaryTrees.TreeNode)obj1;
-            var root2 = (MergeTwoBinaryTrees.TreeNode)obj2;
-            var expected = (MergeTwoBinaryTrees.TreeNode)expectedObj;
-
             // Act
             var actual = MergeTwoBinaryTrees.Run(root1, root2);
 

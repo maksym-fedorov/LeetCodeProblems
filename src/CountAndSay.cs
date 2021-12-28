@@ -2,7 +2,7 @@
 
 namespace LeetCode.Problems
 {
-    internal sealed class CountAndSay
+    public sealed class CountAndSay
     {
         public static string Run(int n)
         {

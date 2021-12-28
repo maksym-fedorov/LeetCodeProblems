@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.Problems
 {
-    internal sealed class LongestCommonPrefix
+    public sealed class LongestCommonPrefix
     {
         public static string Run(string[] strs)
         {
