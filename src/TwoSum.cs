@@ -15,9 +15,9 @@ namespace LeetCode.Problems
             {
                 dif = target - nums[i];
 
-                if (valuesIndicies.ContainsKey(dif))
+                if (valuesIndicies.TryGetValue(dif, out int value))
                 {
-                    return ValueTuple.Create(valuesIndicies[dif], i);
+                    return ValueTuple.Create(value, i);
                 }
 
                 if (valuesIndicies.ContainsKey(nums[i]))

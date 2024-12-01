@@ -4,10 +4,7 @@
     {
         public static int Run(int[] nums, int target)
         {
-            if (nums is null)
-            {
-                throw new System.ArgumentNullException(nameof(nums));
-            }
+            System.ArgumentNullException.ThrowIfNull(nums);
 
             if (nums.Length == 0)
             {

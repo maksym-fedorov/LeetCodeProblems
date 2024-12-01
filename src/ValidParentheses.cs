@@ -22,9 +22,7 @@ namespace LeetCode.Problems
                     continue;
                 }
 
-                char pop;
-
-                if (!stack.TryPop(out pop))
+                if (!stack.TryPop(out char pop))
                 {
                     return false;
                 }
