@@ -5,7 +5,7 @@ namespace LeetCode.Problems
 {
     public sealed class TwoSum
     {
-        public static ValueTuple<int, int> Run(int[] nums, int target)
+        public static int[] Run(int[] nums, int target)
         {
             var valuesIndicies = new Dictionary<int, int>();
 
@@ -17,7 +17,7 @@ namespace LeetCode.Problems
 
                 if (valuesIndicies.TryGetValue(dif, out int value))
                 {
-                    return ValueTuple.Create(value, i);
+                    return [value, i];
                 }
 
                 if (valuesIndicies.ContainsKey(nums[i]))
@@ -28,7 +28,7 @@ namespace LeetCode.Problems
                 valuesIndicies.Add(nums[i], i);
             }
 
-            throw new ArgumentException("Incorrect input data");
+            return [];
         }
     }
 }
