@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace LeetCode.Problems
+﻿namespace LeetCode.Problems
 {
     public sealed class BestTimeToBuyAndSellStock
     {
