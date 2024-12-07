@@ -1,0 +1,19 @@
+# User-specific
+*.suo
+*.user
+
+# Build artefacts
+[Bb]in/
+[Oo]bj/
+
+# NuGet Packages
+*.nupkg
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+
+# Visual Studio
+.vs
+
+# Visual Studio Code
+.vscode/
