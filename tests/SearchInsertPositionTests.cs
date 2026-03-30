@@ -25,8 +25,7 @@ namespace LeetCode.Problems.Tests
         public void Run_ThrowsArgumentNullException_WhenArrayIsNull()
         {
             // Act
-            // Assert
-            Assert.ThrowsException<ArgumentNullException>(() => SearchInsertPosition.Run(null, 0));
+            Assert.ThrowsExactly<ArgumentNullException>(() => SearchInsertPosition.Run(null, 0));
         }
     }
 }

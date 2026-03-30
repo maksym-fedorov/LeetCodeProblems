@@ -7,7 +7,7 @@ namespace LeetCode.Problems.Tests
     public sealed class ReverseLinkedListTests
     {
         [TestMethod]
-        [DynamicData(nameof(GetTestData), DynamicDataSourceType.Method)]
+        [DynamicData(nameof(GetTestData))]
         public void ReverseList_ReturnsReversedList(ReverseLinkedList.ListNode node, ReverseLinkedList.ListNode expected)
         {
             // Act

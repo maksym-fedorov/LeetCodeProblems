@@ -7,7 +7,7 @@ namespace LeetCode.Problems.Tests
     public sealed class MergeTwoBinaryTreesTests
     {
         [TestMethod]
-        [DynamicData(nameof(GetTestData), DynamicDataSourceType.Method)]
+        [DynamicData(nameof(GetTestData))]
         public void Run_ReturnsMergeOfTwoSortedLists(MergeTwoBinaryTrees.TreeNode root1, MergeTwoBinaryTrees.TreeNode root2, MergeTwoBinaryTrees.TreeNode expected)
         {
             // Act
@@ -18,24 +18,26 @@ namespace LeetCode.Problems.Tests
             var actualNodesQueue = new Queue<MergeTwoBinaryTrees.TreeNode>();
             expectedNodesQueue.Enqueue(expected);
             actualNodesQueue.Enqueue(actual);
-            
-            while (!expectedNodesQueue.TryDequeue(out var expectedNode) && !actualNodesQueue.TryDequeue(out var actualNode))
+
+            while (expectedNodesQueue.TryDequeue(out var expectedNode) && actualNodesQueue.TryDequeue(out var actualNode))
             {
                 if (expectedNode == null || actualNode == null)
                 {
-                    Assert.IsNull(expected);
-                    Assert.IsNull(actual);
-
+                    Assert.IsNull(expectedNode);
+                    Assert.IsNull(actualNode);
                     continue;
                 }
 
-                Assert.Equals(expectedNode.val, actualNode.val);
+                Assert.AreEqual(expectedNode.val, actualNode.val);
 
                 expectedNodesQueue.Enqueue(expectedNode.left);
                 expectedNodesQueue.Enqueue(expectedNode.right);
-                actualNodesQueue.Enqueue(expectedNode.left);
-                actualNodesQueue.Enqueue(expectedNode.right);
+                actualNodesQueue.Enqueue(actualNode.left);
+                actualNodesQueue.Enqueue(actualNode.right);
             }
+
+            Assert.AreEqual(0, expectedNodesQueue.Count);
+            Assert.AreEqual(0, actualNodesQueue.Count);
         }
 
         private static IEnumerable<object[]> GetTestData()

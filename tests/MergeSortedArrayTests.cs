@@ -7,7 +7,7 @@ namespace LeetCode.Problems.Tests
     public sealed class MergeSortedArrayTests
     {
         [TestMethod]
-        [DynamicData(nameof(GetTestData), DynamicDataSourceType.Method)]
+        [DynamicData(nameof(GetTestData))]
         public void Merge_ShouldMatchExpected(int[] nums1, int nums1Size, int[] nums2, int nums2Size, int[] expected)
         {
             // Arrange
