@@ -2,7 +2,7 @@ namespace LeetCode.Problems.TwoPointers
 {
     public class ContainerWithMostWater
     {
-        public static int GetMaxArea(int[] heights)
+        public static int Run(int[] heights)
         {
             int h1 = 0, h2 = heights.Length - 1;
             int maxArea = 0;

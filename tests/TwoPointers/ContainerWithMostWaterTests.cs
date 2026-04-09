@@ -12,10 +12,10 @@ namespace LeetCode.Problems.Tests.TwoPointers
         [DataRow(16, 4, 3, 2, 1, 4)]
         [DataRow(2, 1, 2, 1)]
         [DataRow(17, 2, 3, 4, 5, 18, 17, 6)]
-        public void GetMaxArea_ReturnsMaxArea(int expected, params int[] heights)
+        public void Run_ReturnsMaxArea(int expected, params int[] heights)
         {
             // Act
-            var actual = ContainerWithMostWater.GetMaxArea(heights);
+            var actual = ContainerWithMostWater.Run(heights);
 
             // Assert
             Assert.AreEqual(expected, actual);

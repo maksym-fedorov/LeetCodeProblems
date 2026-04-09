@@ -10,10 +10,10 @@ namespace LeetCode.Problems.Tests.TwoPointers
     {
         [TestMethod]
         [DynamicData(nameof(GetTestData))]
-        public void HasCycle_ReturnsExpectedResult(ListNode head, bool expected)
+        public void Run_ReturnsExpectedResult(ListNode head, bool expected)
         {
             // Act
-            var actual = LinkedListCycle.HasCycle(head);
+            var actual = LinkedListCycle.Run(head);
 
             // Assert
             Assert.AreEqual(expected, actual);

@@ -14,10 +14,10 @@ namespace LeetCode.Problems.Tests.SlidingWindow
         [DataRow(" ", 1)]
         [DataRow("au", 2)]
         [DataRow("dvdf", 3)]
-        public void LengthOfLongestSubstring_ReturnsExpectedLength(string input, int expected)
+        public void Run_ReturnsExpectedLength(string input, int expected)
         {
             // Act
-            var actual = LongestSubstringWithoutRepeatingCharacters.LengthOfLongestSubstring(input);
+            var actual = LongestSubstringWithoutRepeatingCharacters.Run(input);
 
             // Assert
             Assert.AreEqual(expected, actual);

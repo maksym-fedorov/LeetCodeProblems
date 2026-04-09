@@ -4,7 +4,7 @@ namespace LeetCode.Problems.SlidingWindow
 {
     public sealed class LongestSubstringWithoutRepeatingCharacters
     {
-        public static int LengthOfLongestSubstring(string s)
+        public static int Run(string s)
         {
             if (string.IsNullOrEmpty(s))
             { 

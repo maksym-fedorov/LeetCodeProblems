@@ -9,7 +9,7 @@ namespace LeetCode.Problems.TwoPointers
             public ListNode(int x) { val = x; next = null; }
         }
 
-        public static bool HasCycle(ListNode head)
+        public static bool Run(ListNode head)
         {
             ListNode? slow = head;
             ListNode? fast = head;
