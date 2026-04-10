@@ -1,7 +1,6 @@
-﻿using LeetCode.Problems.Hashing;
+﻿using System.Collections.Generic;
+using LeetCode.Problems.Hashing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
 
 namespace LeetCode.Problems.Tests.Hashing
 {
